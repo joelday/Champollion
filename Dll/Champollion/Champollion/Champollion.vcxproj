@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{F8E821D1-34C5-452C-AADF-5468D2BBED14}</ProjectGuid>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>Champollion</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Decompiler\AsmCoder.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Coder.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\DumpTree.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\ArrayAccess.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\ArrayCreate.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\ArrayLength.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\Assign.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\AssignOperator.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\Base.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\BinaryOperator.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\CallMethod.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\Cast.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\Constant.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\Copy.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\Declare.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\FieldNodeMixin.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\IdentifierString.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\IfElse.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\NodeComparer.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\Nodes.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\Params.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\PropertyAccess.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\Return.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\Scope.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\StructCreate.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\UnaryOperator.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\Visitor.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\While.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\Node\WithNode.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\OutputWriter.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\PscCodeBlock.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\PscCodeGenerator.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\PscCoder.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\PscDecompiler.hpp" />
+    <ClInclude Include="..\..\..\Decompiler\StreamWriter.hpp" />
+    <ClInclude Include="..\..\..\Pex\Binary.hpp" />
+    <ClInclude Include="..\..\..\Pex\DebugInfo.hpp" />
+    <ClInclude Include="..\..\..\Pex\DocumentedItem.hpp" />
+    <ClInclude Include="..\..\..\Pex\FileReader.hpp" />
+    <ClInclude Include="..\..\..\Pex\Function.hpp" />
+    <ClInclude Include="..\..\..\Pex\Header.hpp" />
+    <ClInclude Include="..\..\..\Pex\Instruction.hpp" />
+    <ClInclude Include="..\..\..\Pex\NamedItem.hpp" />
+    <ClInclude Include="..\..\..\Pex\Object.hpp" />
+    <ClInclude Include="..\..\..\Pex\Property.hpp" />
+    <ClInclude Include="..\..\..\Pex\State.hpp" />
+    <ClInclude Include="..\..\..\Pex\StringTable.hpp" />
+    <ClInclude Include="..\..\..\Pex\StructInfo.hpp" />
+    <ClInclude Include="..\..\..\Pex\TypedItem.hpp" />
+    <ClInclude Include="..\..\..\Pex\TypedName.hpp" />
+    <ClInclude Include="..\..\..\Pex\UserFlag.hpp" />
+    <ClInclude Include="..\..\..\Pex\UserFlagged.hpp" />
+    <ClInclude Include="..\..\..\Pex\Value.hpp" />
+    <ClInclude Include="..\..\..\Pex\Variable.hpp" />
+    <ClInclude Include="Champollion.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="PexStreamReader.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Decompiler\AsmCoder.cpp" />
+    <ClCompile Include="..\..\..\Decompiler\Coder.cpp" />
+    <ClCompile Include="..\..\..\Decompiler\Node\Base.cpp" />
+    <ClCompile Include="..\..\..\Decompiler\Node\NodeComparer.cpp" />
+    <ClCompile Include="..\..\..\Decompiler\Node\Visitor.cpp" />
+    <ClCompile Include="..\..\..\Decompiler\PscCodeBlock.cpp" />
+    <ClCompile Include="..\..\..\Decompiler\PscCodeGenerator.cpp" />
+    <ClCompile Include="..\..\..\Decompiler\PscCoder.cpp" />
+    <ClCompile Include="..\..\..\Decompiler\PscDecompiler.cpp" />
+    <ClCompile Include="..\..\..\Pex\Binary.cpp" />
+    <ClCompile Include="..\..\..\Pex\DebugInfo.cpp" />
+    <ClCompile Include="..\..\..\Pex\DocumentedItem.cpp" />
+    <ClCompile Include="..\..\..\Pex\FileReader.cpp" />
+    <ClCompile Include="..\..\..\Pex\Function.cpp" />
+    <ClCompile Include="..\..\..\Pex\Header.cpp" />
+    <ClCompile Include="..\..\..\Pex\Instruction.cpp" />
+    <ClCompile Include="..\..\..\Pex\NamedItem.cpp" />
+    <ClCompile Include="..\..\..\Pex\Object.cpp" />
+    <ClCompile Include="..\..\..\Pex\Property.cpp" />
+    <ClCompile Include="..\..\..\Pex\State.cpp" />
+    <ClCompile Include="..\..\..\Pex\StringTable.cpp" />
+    <ClCompile Include="..\..\..\Pex\TypedItem.cpp" />
+    <ClCompile Include="..\..\..\Pex\TypedName.cpp" />
+    <ClCompile Include="..\..\..\Pex\UserFlag.cpp" />
+    <ClCompile Include="..\..\..\Pex\UserFlagged.cpp" />
+    <ClCompile Include="..\..\..\Pex\Value.cpp" />
+    <ClCompile Include="..\..\..\Pex\Variable.cpp" />
+    <ClCompile Include="Champollion.cpp" />
+    <ClCompile Include="PexStreamReader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,6 +1,6 @@
-#include "PscCoder.hpp"
+#define _CRT_SECURE_NO_WARNINGS
 
-#include <boost/algorithm/string/case_conv.hpp>
+#include "PscCoder.hpp"
 
 #include <cassert>
 #include <ctime>
@@ -11,6 +11,7 @@
 #include <string>
 
 #include "PscDecompiler.hpp"
+#include <algorithm>
 
 /**
  * @brief Constructor
@@ -603,7 +604,9 @@ std::string Decompiler::PscCoder::mapType(std::string type)
     if (type.length() > 2 && type[type.length() - 2] == '[' && type[type.length() - 1] == ']')
         return mapType(type.substr(0, type.length() - 2)) + "[]";
     auto lowerType = type;
-    boost::algorithm::to_lower(lowerType);
+
+    std::transform(lowerType.begin(), lowerType.end(), lowerType.begin(), ::tolower);
+
     auto a = prettyTypeNameMap.find(lowerType);
     if (a != prettyTypeNameMap.end())
         return a->second;
